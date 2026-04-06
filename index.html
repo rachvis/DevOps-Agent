@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBM Cloud DevOps Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand-row">
+        <div class="ibm-mark" aria-hidden="true">IBM</div>
+        <div>
+          <p class="eyebrow">Carbon-inspired concept</p>
+          <h1>IBM Cloud DevOps Agent</h1>
+        </div>
+      </div>
+      <p class="subtitle">
+        A conceptual IBM Cloud offering modeled after AWS DevOps Agent workflows,
+        with IBM-native service integrations and guided remediation.
+      </p>
+      <div class="header-actions">
+        <button class="btn btn-primary">Start assessment</button>
+        <button class="btn btn-secondary">View demo pipeline</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="tile intro">
+        <h2>What this agent does</h2>
+        <p>
+          Continuously plans, builds, deploys, observes, and remediates cloud-native
+          applications. It ingests telemetry, CI/CD events, security findings, and ticket
+          signals to propose and execute safe change sets.
+        </p>
+      </section>
+
+      <section class="grid two-col">
+        <article class="tile">
+          <h3>Agent workflow</h3>
+          <ol class="flow">
+            <li><strong>Understand</strong><span>Read issues, incidents, IaC, and repo history.</span></li>
+            <li><strong>Plan</strong><span>Generate pull request plans with policy checks.</span></li>
+            <li><strong>Execute</strong><span>Run CI/CD in IBM Cloud Continuous Delivery.</span></li>
+            <li><strong>Validate</strong><span>Use test, scan, and canary telemetry gates.</span></li>
+            <li><strong>Improve</strong><span>Create post-incident tasks and optimization stories.</span></li>
+          </ol>
+        </article>
+
+        <article class="tile">
+          <h3>Live run status</h3>
+          <div class="status-list">
+            <div class="status ok"><span class="dot"></span>Repo sync: Git Repos and Issue Tracking</div>
+            <div class="status ok"><span class="dot"></span>Pipeline: Tekton run #1042 successful</div>
+            <div class="status warn"><span class="dot"></span>Policy check: 1 medium CVE in base image</div>
+            <div class="status ok"><span class="dot"></span>Canary on Code Engine: 8% traffic</div>
+            <div class="status ok"><span class="dot"></span>Observability: Instana + Monitoring healthy</div>
+          </div>
+          <button class="btn btn-ghost">Open runbook</button>
+        </article>
+      </section>
+
+      <section class="tile">
+        <div class="section-head">
+          <h3>AWS → IBM Cloud integration mapping</h3>
+          <p>Equivalent capabilities for an IBM Cloud DevOps Agent experience.</p>
+        </div>
+        <div class="mapping-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>AWS integration</th>
+                <th>IBM Cloud equivalent</th>
+                <th>How the agent uses it</th>
+              </tr>
+            </thead>
+            <tbody id="mapping-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="grid three-col">
+        <article class="tile small">
+          <h4>Security & compliance</h4>
+          <p>Vulnerability Advisor + IBM Cloud Security and Compliance Center checks in every change plan.</p>
+        </article>
+        <article class="tile small">
+          <h4>Deployment targets</h4>
+          <p>Code Engine, Kubernetes Service, Red Hat OpenShift on IBM Cloud, and Virtual Servers.</p>
+        </article>
+        <article class="tile small">
+          <h4>Agent controls</h4>
+          <p>Policy-driven autonomy levels: suggest-only, human-approved, and guarded auto-apply.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">Concept UI · IBM Carbon-inspired spacing, typography, and interaction patterns.</footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
