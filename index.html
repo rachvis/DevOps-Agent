@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBM Cloud DevOps Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand-row">
+        <div class="ibm-mark" aria-hidden="true">IBM</div>
+        <div>
+          <p class="eyebrow">IBM Carbon-inspired product concept</p>
+          <h1>IBM Cloud DevOps Agent</h1>
+        </div>
+      </div>
+      <p class="subtitle">
+        An enterprise DevOps copilot for planning, building, deploying, securing, and operating
+        applications on IBM Cloud with human-in-the-loop automation.
+      </p>
+      <div class="header-actions">
+        <button class="btn btn-primary">Launch workspace</button>
+        <button class="btn btn-secondary">Open live demo</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="tile intro">
+        <h2>Production-ready DevOps operations</h2>
+        <p>
+          The agent monitors delivery workflows, infrastructure drift, runtime health, and policy
+          compliance to suggest and execute approved remediations with traceable change logs.
+        </p>
+      </section>
+
+      <section class="grid two-col">
+        <article class="tile">
+          <h3>Agent lifecycle</h3>
+          <ol class="flow">
+            <li><strong>Discover</strong><span>Ingest incidents, telemetry, pull requests, and deployment history.</span></li>
+            <li><strong>Plan</strong><span>Draft safe change sets with risk scoring and rollback strategy.</span></li>
+            <li><strong>Validate</strong><span>Run quality, security, and reliability gates before promotion.</span></li>
+            <li><strong>Release</strong><span>Progressively roll out changes across environments.</span></li>
+            <li><strong>Optimize</strong><span>Generate follow-up tasks for cost, performance, and resilience.</span></li>
+          </ol>
+        </article>
+
+        <article class="tile">
+          <h3>Live run status</h3>
+          <div class="status-list">
+            <div class="status ok"><span class="dot"></span>Repository sync: healthy</div>
+            <div class="status ok"><span class="dot"></span>Pipeline execution: successful (run #1042)</div>
+            <div class="status warn"><span class="dot"></span>Security gate: base image patch required</div>
+            <div class="status ok"><span class="dot"></span>Progressive rollout: 10% traffic on candidate revision</div>
+            <div class="status ok"><span class="dot"></span>Application health: SLO within target</div>
+          </div>
+          <button class="btn btn-ghost">View runbook</button>
+        </article>
+      </section>
+
+      <section class="tile">
+        <div class="section-head">
+          <h3>IBM Cloud integration blueprint</h3>
+          <p>Core platform services that power the DevOps Agent experience.</p>
+        </div>
+        <div class="mapping-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Capability area</th>
+                <th>IBM Cloud service</th>
+                <th>Agent behavior</th>
+              </tr>
+            </thead>
+            <tbody id="mapping-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="grid three-col">
+        <article class="tile small">
+          <h4>Security and compliance</h4>
+          <p>Continuous checks with Security and Compliance Center and Vulnerability Advisor.</p>
+        </article>
+        <article class="tile small">
+          <h4>Deployment targets</h4>
+          <p>Code Engine, Kubernetes Service, and Red Hat OpenShift on IBM Cloud.</p>
+        </article>
+        <article class="tile small">
+          <h4>Operational controls</h4>
+          <p>Autonomy levels for suggest-only, approve-and-run, and guarded auto-remediation.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">Final concept direction · Carbon-aligned foundations with IBM Cloud-native integrations.</footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
