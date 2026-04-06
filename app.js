@@ -1,69 +1,69 @@
-const integrations = [
+const mappings = [
   {
-    capability: 'Serverless compute',
+    aws: 'AWS Lambda',
     ibm: 'IBM Cloud Code Engine',
-    behavior: 'Executes automation handlers, deployment hooks, and event-driven remediation tasks.'
+    usage: 'Runs serverless API handlers, background jobs, and event-driven remediation actions.'
   },
   {
-    capability: 'CI/CD orchestration',
+    aws: 'AWS CodePipeline / CodeBuild',
     ibm: 'IBM Cloud Continuous Delivery (Tekton Pipelines)',
-    behavior: 'Builds, tests, signs, and promotes releases through policy-gated environments.'
+    usage: 'Builds, tests, signs artifacts, and promotes releases through policy gates.'
   },
   {
-    capability: 'Source control and work items',
+    aws: 'AWS CodeCommit',
     ibm: 'Git Repos and Issue Tracking',
-    behavior: 'Tracks agent-authored pull requests, linked issues, and release notes.'
+    usage: 'Stores source and agent-generated pull requests with linked work items.'
   },
   {
-    capability: 'Container platform',
+    aws: 'Amazon ECS / EKS',
     ibm: 'IBM Kubernetes Service / Red Hat OpenShift on IBM Cloud',
-    behavior: 'Runs microservices and supports progressive release patterns across clusters.'
+    usage: 'Deploys containerized microservices with progressive rollout strategies.'
   },
   {
-    capability: 'Metrics and logs',
+    aws: 'Amazon CloudWatch',
     ibm: 'IBM Cloud Monitoring + Log Analysis',
-    behavior: 'Streams runtime telemetry into incident correlation and health scoring.'
+    usage: 'Feeds real-time health metrics and logs into agent diagnostics.'
   },
   {
-    capability: 'Application observability',
+    aws: 'AWS X-Ray',
     ibm: 'IBM Instana Observability',
-    behavior: 'Provides end-to-end tracing context for root-cause analysis and optimization plans.'
+    usage: 'Provides distributed tracing context for root-cause and optimization suggestions.'
   },
   {
-    capability: 'Identity and access',
+    aws: 'AWS IAM',
     ibm: 'IBM Cloud IAM',
-    behavior: 'Enforces least-privilege roles, change approvals, and execution boundaries.'
+    usage: 'Controls least-privilege execution and approval pathways for autonomous actions.'
   },
   {
-    capability: 'Secrets and certificates',
+    aws: 'AWS Secrets Manager',
     ibm: 'IBM Cloud Secrets Manager',
-    behavior: 'Delivers rotated secrets to pipelines and runtime workloads securely.'
+    usage: 'Supplies rotated secrets and certificates to runtime and pipeline tasks.'
   },
   {
-    capability: 'Infrastructure automation',
+    aws: 'AWS CloudFormation / CDK',
     ibm: 'IBM Cloud Schematics (Terraform)',
-    behavior: 'Generates governed infrastructure plans with drift detection and rollback paths.'
+    usage: 'Creates governed infrastructure change plans that the agent can propose or apply.'
   },
   {
-    capability: 'Artifact and backup storage',
+    aws: 'Amazon S3',
     ibm: 'IBM Cloud Object Storage',
-    behavior: 'Stores build artifacts, deployment bundles, diagnostic data, and audit snapshots.'
+    usage: 'Holds artifacts, model prompts, logs, and deployment backups.'
   },
   {
-    capability: 'Eventing and notifications',
+    aws: 'Amazon SNS / SQS',
     ibm: 'IBM Event Notifications / Event Streams',
-    behavior: 'Coordinates asynchronous approvals, deployment events, and incident fan-out.'
+    usage: 'Drives asynchronous event routing, approvals, and incident fan-out.'
   }
 ];
 
 const tbody = document.getElementById('mapping-body');
 
-integrations.forEach((entry) => {
+mappings.forEach((entry) => {
   const row = document.createElement('tr');
   row.innerHTML = `
-    <td>${entry.capability}</td>
+    <td>${entry.aws}</td>
     <td><strong>${entry.ibm}</strong></td>
-    <td>${entry.behavior}</td>
+    <td>${entry.usage}</td>
   `;
   tbody.appendChild(row);
 });

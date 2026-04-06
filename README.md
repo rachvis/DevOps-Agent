@@ -32,4 +32,4 @@ A workflow is included at `.github/workflows/deploy-pages.yml`.
 
 - `index.html` – page structure
 - `styles.css` – Carbon-inspired styling
-- `app.js` – IBM Cloud integration blueprint data + table rendering
+- `app.js` – AWS → IBM mapping data + table rendering
