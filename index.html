@@ -1,108 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IBM Cloud DevOps Agent</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="brand-row">
-        <div class="ibm-mark" aria-hidden="true">IBM</div>
-        <div>
-          <p class="eyebrow">Carbon-inspired concept</p>
-          <h1>IBM Cloud DevOps Agent</h1>
-        </div>
-      </div>
-      <p class="subtitle">
-        A conceptual IBM Cloud offering modeled after AWS DevOps Agent workflows,
-        with IBM-native service integrations and guided remediation.
-      </p>
-      <div class="header-actions">
-        <button class="btn btn-primary">Start assessment</button>
-        <button class="btn btn-secondary">View demo pipeline</button>
-      </div>
-    </header>
-
-    <main>
-      <section class="tile intro">
-        <h2>What this agent does</h2>
-        <p>
-          Continuously plans, builds, deploys, observes, and remediates cloud-native
-          applications. It ingests telemetry, CI/CD events, security findings, and ticket
-          signals to propose and execute safe change sets.
-        </p>
-      </section>
-
-      <section class="grid two-col">
-        <article class="tile">
-          <h3>Agent workflow</h3>
-          <ol class="flow">
-            <li><strong>Understand</strong><span>Read issues, incidents, IaC, and repo history.</span></li>
-            <li><strong>Plan</strong><span>Generate pull request plans with policy checks.</span></li>
-            <li><strong>Execute</strong><span>Run CI/CD in IBM Cloud Continuous Delivery.</span></li>
-            <li><strong>Validate</strong><span>Use test, scan, and canary telemetry gates.</span></li>
-            <li><strong>Improve</strong><span>Create post-incident tasks and optimization stories.</span></li>
-          </ol>
-        </article>
-
-        <article class="tile">
-          <h3>Live run status</h3>
-          <div class="status-list">
-            <div class="status ok"><span class="dot"></span>Repo sync: Git Repos and Issue Tracking</div>
-            <div class="status ok"><span class="dot"></span>Pipeline: Tekton run #1042 successful</div>
-            <div class="status warn"><span class="dot"></span>Policy check: 1 medium CVE in base image</div>
-            <div class="status ok"><span class="dot"></span>Canary on Code Engine: 8% traffic</div>
-            <div class="status ok"><span class="dot"></span>Observability: Instana + Monitoring healthy</div>
-          </div>
-          <button class="btn btn-ghost">Open runbook</button>
-        </article>
-      </section>
-
-      <section class="tile">
-        <div class="section-head">
-          <h3>AWS → IBM Cloud integration mapping</h3>
-          <p>Equivalent capabilities for an IBM Cloud DevOps Agent experience.</p>
-        </div>
-        <div class="mapping-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>AWS integration</th>
-                <th>IBM Cloud equivalent</th>
-                <th>How the agent uses it</th>
-              </tr>
-            </thead>
-            <tbody id="mapping-body"></tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="grid three-col">
-        <article class="tile small">
-          <h4>Security & compliance</h4>
-          <p>Vulnerability Advisor + IBM Cloud Security and Compliance Center checks in every change plan.</p>
-        </article>
-        <article class="tile small">
-          <h4>Deployment targets</h4>
-          <p>Code Engine, Kubernetes Service, Red Hat OpenShift on IBM Cloud, and Virtual Servers.</p>
-        </article>
-        <article class="tile small">
-          <h4>Agent controls</h4>
-          <p>Policy-driven autonomy levels: suggest-only, human-approved, and guarded auto-apply.</p>
-        </article>
-      </section>
-    </main>
-
-    <footer class="footer">Concept UI · IBM Carbon-inspired spacing, typography, and interaction patterns.</footer>
-
-    <script src="app.js"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provisioning a Terraform template | Terraform Enterprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead"><a class="brand" href="#top" aria-label="HashiCorp Terraform Enterprise home"><span class="hashi" aria-hidden="true">▰</span> HASHICORP <strong>TERRAFORM</strong></a><nav aria-label="Primary navigation"><a href="#overview">Overview</a><a href="#steps">Workspaces</a><a href="#variables">Variables</a><a href="#apply">Runs</a></nav><button class="account-button">Documentation <span aria-hidden="true">↗</span></button></header>
+<div class="product-bar"><div><span class="product-name">Terraform Enterprise</span><span class="separator">/</span><span>Documentation</span></div><button class="version">v2026.1 <span aria-hidden="true">⌄</span></button></div>
+<div class="layout" id="top"><aside class="sidebar" aria-label="Documentation navigation"><label class="search"><span aria-hidden="true">⌕</span><input type="search" placeholder="Search documentation"></label><p class="nav-label">GETTING STARTED</p><a href="#overview">Introduction</a><a href="#prerequisites">Prerequisites</a><p class="nav-label">MANAGE INFRASTRUCTURE</p><a class="active" href="#top">Provisioning Terraform templates</a><a href="#workspace">Create a workspace</a><a href="#variables">Configure variables</a><a href="#apply">Plan and apply</a><p class="nav-label">REFERENCE</p><a href="#">Terraform CLI</a><a href="#">VCS providers</a></aside>
+<main><div class="breadcrumbs"><a href="#">Docs</a><span>/</span><a href="#">Terraform Enterprise</a><span>/</span><span>Provisioning Terraform templates</span></div><div class="article-grid"><article class="content"><p class="overline">TERRAFORM ENTERPRISE</p><h1>Provisioning Terraform templates</h1><p class="lead">Use Terraform Enterprise to provision infrastructure from a Terraform configuration. Create a workspace, connect your configuration, set its variables, and safely review and apply the generated plan.</p><div class="notice"><span class="notice-icon" aria-hidden="true">i</span><p>Terraform Enterprise runs Terraform remotely. Your credentials and sensitive input values remain managed in the workspace.</p></div>
+<h2 id="prerequisites">Before you begin</h2><p>Make sure that you have an organization, permission to create workspaces, and a Terraform configuration in a supported version control repository. You also need the cloud credentials and values that your configuration expects.</p><ul><li>Access to a Terraform Enterprise organization and project.</li><li>A Git repository containing your <code>.tf</code> files.</li><li>Cloud credentials with permission to create the requested resources.</li></ul>
+<h2 id="steps">Provision a Terraform template</h2><p>Complete the following steps to provision your infrastructure with a VCS-driven workspace.</p>
+<section class="step" id="workspace"><div class="step-number">1</div><div><h3>Create a workspace</h3><p>In Terraform Enterprise, select <strong>New workspace</strong>. Choose <strong>Version control workflow</strong>, then select the organization, project, and repository that contains your Terraform template.</p><div class="image-placeholder workspace-visual"><div class="window-bar"><span></span><span></span><span></span></div><p>New workspace</p><div class="repo-row"><span class="git-icon">◆</span><span>github.com / acme / network-template</span><b>Selected</b></div></div></div></section>
+<section class="step" id="variables"><div class="step-number">2</div><div><h3>Configure workspace variables</h3><p>Open the workspace <strong>Variables</strong> page. Add the input variables required by your configuration. Mark credentials, tokens, and other confidential values as sensitive.</p><pre><code>name_prefix = "production"
+region      = "us-east-1"
+environment = "prod"</code></pre></div></section>
+<section class="step" id="apply"><div class="step-number">3</div><div><h3>Review and apply the run</h3><p>Queue a plan from the workspace. Terraform Enterprise retrieves the configuration, validates it, and presents the proposed changes. Review the plan, then select <strong>Confirm &amp; Apply</strong> when it is ready to provision.</p><div class="run-card"><div><span class="run-dot"></span><strong>Run #12</strong><small>Plan finished</small></div><button class="apply-button">Confirm &amp; Apply</button></div></div></section>
+<h2 id="overview">Next steps</h2><p>After the apply completes, review the workspace outputs and state. Future commits to the connected repository automatically queue a new plan, giving your team a consistent, reviewable path for infrastructure changes.</p><div class="next-links"><a href="#">Manage workspace state <span>→</span></a><a href="#">Configure notifications <span>→</span></a></div></article><aside class="on-page"><p>ON THIS PAGE</p><a href="#prerequisites">Before you begin</a><a href="#steps">Provision a Terraform template</a><a href="#workspace">Create a workspace</a><a href="#variables">Configure variables</a><a href="#apply">Review and apply the run</a><a href="#overview">Next steps</a></aside></div></main></div><script src="app.js"></script>
+</body></html>

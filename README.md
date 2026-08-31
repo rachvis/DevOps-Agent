@@ -1,6 +1,9 @@
-# IBM Cloud DevOps Agent Prototype
+# Terraform Enterprise Provisioning Tutorial
 
-This repository contains a static UI prototype for an IBM Cloud DevOps Agent experience.
+This repository contains a static documentation-style tutorial that walks through
+provisioning a Terraform template with Terraform Enterprise. It covers creating a
+VCS-driven workspace, configuring workspace variables, and reviewing and applying
+a remote Terraform run.
 
 ## Run locally
 
@@ -30,6 +33,6 @@ A workflow is included at `.github/workflows/deploy-pages.yml`.
 
 ## Files
 
-- `index.html` – page structure
-- `styles.css` – Carbon-inspired styling
-- `app.js` – AWS → IBM mapping data + table rendering
+- `index.html` – Terraform Enterprise tutorial structure and content
+- `styles.css` – responsive documentation-style visual design
+- `app.js` – confirm-and-apply demonstration interaction
